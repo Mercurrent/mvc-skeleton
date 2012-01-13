@@ -3,26 +3,26 @@ package ru.hh.school.example.web;
 import ru.hh.school.example.User;
 
 public class UserInfo {
-  
-  private final Long id;
-  private final String email;
-  private final String fullName;
 
-  public UserInfo(User user) {
-    this.id = user.getId();
-    this.email = user.getEmail();
-    this.fullName = user.getFullName();
-  }
+    private final Long id;
+    private final String email;
+    private final String fullName;
 
-  public Long getId() {
-    return id;
-  }
+    public UserInfo(User user) {
+        this.id = user.getId();
+        this.email = user.getEmail();
+        this.fullName = user.getFullName();
+    }
 
-  public String getEmail() {
-    return email;
-  }
+    public Long getId() {
+        return id;
+    }
 
-  public String getFullName() {
-    return fullName;
-  }
+    public String getEmail() {
+        return email;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
 }
