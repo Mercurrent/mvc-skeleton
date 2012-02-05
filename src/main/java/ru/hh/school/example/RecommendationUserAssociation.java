@@ -19,15 +19,15 @@ public class RecommendationUserAssociation extends Entity {
         beingRefereeRecommendationsIds = new ArrayList<Long>();
     }
     
-    public Iterable<Long> getRecomIdsWhereReferee() {
+    public Iterable<Long> getRecommendationIdsWhereReferee() {
         return beingRefereeRecommendationsIds;
     }
     
-    public Iterable<Long> getRecomIdsWhereRecommended() {
+    public Iterable<Long> getRecommendationIdsWhereRecommended() {
         return beingRecommendedRecommendationsIds;
     }
 
-    public Iterable<Long> getRecomIdsWhereAddressee() {
+    public Iterable<Long> getRecommendationIdsWhereAddressee() {
         return beingAddresseeRecommendationsIds;
     }
 
