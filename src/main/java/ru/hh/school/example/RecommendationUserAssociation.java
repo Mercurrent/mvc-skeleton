@@ -1,9 +1,11 @@
 package ru.hh.school.example;
 
+import ru.hh.school.example.ddd.Entity;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecommendationUserAssociation {
+public class RecommendationUserAssociation extends Entity {
     
     private final Long userId;
     private List<Long> beingRecommendedRecommendationsIds;
@@ -27,5 +29,9 @@ public class RecommendationUserAssociation {
 
     public Iterable<Long> getRecomIdsWhereAddressee() {
         return beingAddresseeRecommendationsIds;
+    }
+
+    public void setRecommendationWhereReferee(final Long recommendationId) {
+
     }
 }

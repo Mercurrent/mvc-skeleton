@@ -1,10 +1,6 @@
 package ru.hh.school.example;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Tiana
- * Date: 05.02.12
- * Time: 20:46
- */
-public interface RecommendationUserAssociationRepository {
+import ru.hh.school.example.ddd.Repository;
+
+public interface RecommendationUserAssociationRepository extends Repository<RecommendationUserAssociation> {
 }

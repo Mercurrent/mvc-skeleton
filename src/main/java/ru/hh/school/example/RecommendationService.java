@@ -10,12 +10,13 @@ import java.util.List;
 public class RecommendationService {
 
     private final RecommendationRepository recommendations;
-    private final UserRepository recommendationsAssociatedUsers;
+    private final RecommendationUserAssociationRepository recommendationUserAssociations;
 
     @Autowired
-    public RecommendationService(RecommendationRepository recommendations, UserRepository users) {
+    public RecommendationService(RecommendationRepository recommendations,
+                                 RecommendationUserAssociationRepository associations) {
         this.recommendations = recommendations;
-        recommendationsAssociatedUsers = users;
+        recommendationUserAssociations = associations;
     }
 
     public Recommendation registerRecommendation(final Long refereeId,
@@ -25,6 +26,10 @@ public class RecommendationService {
 
         Recommendation recommendation = new Recommendation(refereeId, recommendedUserId, addresseeId);
         recommendations.put(recommendation);
+
+        if()
+
+
         return recommendation;
     }
     
@@ -35,7 +40,7 @@ public class RecommendationService {
     public Iterable<Recommendation> allByReferee(Long refereeId) {
         List<Recommendation> recommendations = new ArrayList<Recommendation>();
 
-        if ()
+
     }
 
     
