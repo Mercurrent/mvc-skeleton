@@ -15,18 +15,14 @@ public class RecommendationService {
         this.recommendations = recommendations;
     }
 
-    public Recommendation registerRecommendation(final User referee,
-                                                 final User recommendedUser,
-                                                 final User addressee,
+    public Recommendation registerRecommendation(final Long refereeId,
+                                                 final Long recommendedUserId,
+                                                 final Long addresseeId,
                                                  final String text) {
 
-
-        User existing = users.byEmail(email);
-        if (existing != null)
-            throw new EmailAlreadyBoundException(email);
-        User user = new User(email, password, fullName);
-        users.put(user);
-        return user;
+        Recommendation recommendation = new Recommendation(refereeId, recommendedUserId, addresseeId);
+        recommendations.put(recommendation);
+        return recommendation;
     }
     
     
