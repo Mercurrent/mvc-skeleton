@@ -21,13 +21,12 @@ public class RecommendationService {
 
     public Recommendation registerRecommendation(final Long refereeId,
                                                  final Long recommendedUserId,
-                                                 final Long addresseeId,
                                                  final String text) {
 
-        Recommendation recommendation = new Recommendation(refereeId, recommendedUserId, addresseeId);
+        Recommendation recommendation = new Recommendation(refereeId, recommendedUserId);
         recommendations.put(recommendation);
 
-        if()
+        recommendationUserAssociations.
 
 
         return recommendation;
