@@ -5,12 +5,14 @@ import ru.hh.school.example.ddd.Entity;
 public class Recommendation extends Entity {
 
     private final User referee;
-    private final User owner;
+    private final User recommendedUser;
+    private final User addressee;
     private String text;
 
-    public Recommendation(final User referee, final User owner) {
+    public Recommendation(final User referee, final User recommendedUser, final User addressee) {
         this.referee = referee;
-        this.owner = owner;
+        this.recommendedUser = recommendedUser;
+        this.addressee = addressee;
     }
 
     public void setText(final String text) {

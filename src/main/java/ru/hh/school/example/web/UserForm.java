@@ -5,6 +5,7 @@ public class UserForm {
     private String email;
     private String password;
     private String fullName;
+    //private String
 
     public String getEmail() {
         return email;
