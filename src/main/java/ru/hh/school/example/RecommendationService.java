@@ -25,10 +25,6 @@ public class RecommendationService {
 
         Recommendation recommendation = new Recommendation(refereeId, recommendedUserId);
         recommendations.put(recommendation);
-
-        recommendationUserAssociations.
-
-
         return recommendation;
     }
     
@@ -36,11 +32,11 @@ public class RecommendationService {
         return recommendations.byId(recommendationId);
     }
 
-    public Iterable<Recommendation> allByReferee(Long refereeId) {
-        List<Recommendation> recommendations = new ArrayList<Recommendation>();
+    //public Iterable<Recommendation> allByReferee(Long refereeId) {
+    //    List<Recommendation> recommendations = new ArrayList<Recommendation>();
 
 
-    }
+    //}
 
     
 

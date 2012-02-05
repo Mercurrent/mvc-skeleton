@@ -1,4 +1,4 @@
-package ru.hh.school.example;
+package ru.hh.school.example.exceptions;
 
 public class WrongPasswordException extends Exception{
     
