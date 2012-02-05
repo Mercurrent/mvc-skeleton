@@ -9,7 +9,7 @@ public class UserDataForm {
     private String experience;
     private String contacts;
     private String additionalInfo;
-    private final List<Recommendation> publicRecommendations;
+    private final List<Long> publicRecommendationsIds;
 
     public UserDataForm(final String education, 
                         final String experience,
@@ -20,7 +20,7 @@ public class UserDataForm {
         this.additionalInfo = additionalInfo;
         this.experience = experience;
         this.contacts = contacts;
-        publicRecommendations = new ArrayList<Recommendation>();
+        publicRecommendationsIds = new ArrayList<Long>();
     }
 
     public String getEducation() {
@@ -55,5 +55,13 @@ public class UserDataForm {
         this.additionalInfo = additionalInfo;
     }
 
-
+    public Iterable<Long> getPublicRecommendations() {
+        return publicRecommendationsIds;
+    }
+    
+    public void addPublicRecommendation (Long recommendationId) {
+        if (!publicRecommendationsIds.contains(recommendationId)) {
+            publicRecommendationsIds.add(recommendationId);
+        }
+    }
 }
