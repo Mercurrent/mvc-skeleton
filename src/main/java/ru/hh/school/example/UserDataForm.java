@@ -9,7 +9,7 @@ public class UserDataForm {
     private String experience;
     private String contacts;
     private String additionalInfo;
-    private List<Recommendation> publicRecommendations;
+    private final List<Recommendation> publicRecommendations;
 
     public UserDataForm(final String education, 
                         final String experience,
@@ -26,20 +26,34 @@ public class UserDataForm {
     public String getEducation() {
         return education;
     }
+    
+    public void setEducation(final String education) {
+        this.education = education;
+    }
 
     public String getExperience() {
         return experience;
+    }
+
+    public void setExperience(final String experience) {
+        this.experience = experience;
     }
 
     public String getContacts() {
         return contacts;
     }
 
+    public void setContacts(final String contacts) {
+        this.contacts = contacts;
+    }
+
     public String getAdditionalInfo() {
         return additionalInfo;
     }
-    
-    public String set
+
+    public void setAdditionalInfo(final String additionalInfo) {
+        this.additionalInfo = additionalInfo;
+    }
 
 
 }
