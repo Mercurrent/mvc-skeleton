@@ -4,15 +4,15 @@ import ru.hh.school.example.ddd.Entity;
 
 public class Recommendation extends Entity {
 
-    private final User referee;
-    private final User recommendedUser;
-    private final User addressee;
+    private final Long refereeId;
+    private final Long recommendedUserId;
+    private final Long addresseeId;
     private String text;
 
-    public Recommendation(final User referee, final User recommendedUser, final User addressee) {
-        this.referee = referee;
-        this.recommendedUser = recommendedUser;
-        this.addressee = addressee;
+    public Recommendation(final Long refereeId, final Long recommendedUserId, final Long addresseeId) {
+        this.refereeId = refereeId;
+        this.recommendedUserId = recommendedUserId;
+        this.addresseeId = addresseeId;
     }
 
     public void setText(final String text) {
@@ -23,12 +23,16 @@ public class Recommendation extends Entity {
         return text;
     }
 
-    public User getReferee() {
-        return referee;
+    public Long getRefereeId() {
+        return refereeId;
     }
     
-    public User getOwner() {
-        return owner;
+    public Long getRecommendedUserId() {
+        return recommendedUserId;
+    }
+    
+    public Long getAddresseeId() {
+        return addresseeId;
     }
 
 
