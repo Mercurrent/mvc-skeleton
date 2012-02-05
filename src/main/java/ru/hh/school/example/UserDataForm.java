@@ -11,7 +11,11 @@ public class UserDataForm {
     private String additionalInfo;
     private final List<Long> publicRecommendationsIds;
 
-    public UserDataForm(final String education, 
+    public UserDataForm() {
+        publicRecommendationsIds = new ArrayList<Long>();
+    }
+
+    public UserDataForm(final String education,
                         final String experience,
                         final String contacts,
                         final String additionalInfo) {

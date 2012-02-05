@@ -10,6 +10,7 @@ public class User extends Entity {
     private String email;
     private String password;
     private String fullName;
+    private UserDataForm info;
 
     public User(String email, String password, String fullName) {
         this.email = email;
