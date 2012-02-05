@@ -3,16 +3,19 @@ package ru.hh.school.example;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class RecommendationService {
 
-    //private final RecommendationRepository privateRecommendations;
-    //private final RecommendationRepository publicRecommendations;
     private final RecommendationRepository recommendations;
+    private final UserRepository recommendationsAssociatedUsers;
 
     @Autowired
-    public RecommendationService(RecommendationRepository recommendations) {
+    public RecommendationService(RecommendationRepository recommendations, UserRepository users) {
         this.recommendations = recommendations;
+        recommendationsAssociatedUsers = users;
     }
 
     public Recommendation registerRecommendation(final Long refereeId,
@@ -29,6 +32,11 @@ public class RecommendationService {
         return recommendations.byId(recommendationId);
     }
 
+    public Iterable<Recommendation> allByReferee(Long refereeId) {
+        List<Recommendation> recommendations = new ArrayList<Recommendation>();
+
+        if ()
+    }
 
     
 
