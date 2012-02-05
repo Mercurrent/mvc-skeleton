@@ -25,6 +25,11 @@ public class RecommendationService {
         return recommendation;
     }
     
+    public Recommendation recommendationById(Long recommendationId) {
+        return recommendations.byId(recommendationId);
+    }
+
+
     
 
 }
