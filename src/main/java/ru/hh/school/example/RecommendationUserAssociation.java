@@ -3,14 +3,14 @@ package ru.hh.school.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecommendationAssociatedUser {
+public class RecommendationUserAssociation {
     
     private final Long userId;
     private List<Long> beingRecommendedRecommendationsIds;
     private List<Long> beingRefereeRecommendationsIds;
     private List<Long> beingAddresseeRecommendationsIds;
     
-    public RecommendationAssociatedUser(final Long userId) {
+    public RecommendationUserAssociation(final Long userId) {
         this.userId = userId;
         beingAddresseeRecommendationsIds = new ArrayList<Long>();
         beingRecommendedRecommendationsIds = new ArrayList<Long>();
