@@ -21,4 +21,18 @@ public class UserService {
         users.put(user);
         return user;
     }
+    
+    public Long getIdByMailAndPassword(String email, String password)
+            throws NoSuchEmailException, WrongPasswordException{
+
+        User userWithSuchMail = users.byEmail(email);
+
+        if (userWithSuchMail == null)
+            throw new NoSuchEmailException(email);
+        if (!userWithSuchMail.getPassword().equals(password)) {
+            throw new WrongPasswordException(email, password);
+        }
+
+        return userWithSuchMail.getId();
+    }
 }
