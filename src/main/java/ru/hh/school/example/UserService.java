@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.hh.school.example.exceptions.EmailAlreadyBoundException;
 import ru.hh.school.example.exceptions.NoSuchEmailException;
+import ru.hh.school.example.exceptions.NoSuchUserIdException;
 import ru.hh.school.example.exceptions.WrongPasswordException;
 
 @Component
@@ -25,7 +26,7 @@ public class UserService {
         return user;
     }
     
-    public User getUserById(Long id) throws No{
+    public User getUserById(Long id) throws NoSuchUserIdException{
         User userWithSuchId = users.byId(id);
         if (userWithSuchId == null) {
             throw new NoSuchUserIdException(id);
