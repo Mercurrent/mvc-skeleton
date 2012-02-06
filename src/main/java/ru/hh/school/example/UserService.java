@@ -2,6 +2,9 @@ package ru.hh.school.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ru.hh.school.example.exceptions.EmailAlreadyBoundException;
+import ru.hh.school.example.exceptions.NoSuchEmailException;
+import ru.hh.school.example.exceptions.WrongPasswordException;
 
 @Component
 public class UserService {
@@ -22,8 +25,16 @@ public class UserService {
         return user;
     }
     
+    public User getUserById(Long id) throws No{
+        User userWithSuchId = users.byId(id);
+        if (userWithSuchId == null) {
+            throw new NoSuchUserIdException(id);
+        }
+        return users.byId(id);
+    }
+    
     public Long getIdByMailAndPassword(String email, String password)
-            throws NoSuchEmailException, WrongPasswordException{
+            throws NoSuchEmailException, WrongPasswordException {
 
         User userWithSuchMail = users.byEmail(email);
 
