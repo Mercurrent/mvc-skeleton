@@ -11,11 +11,16 @@ public class User extends Entity {
     private String password;
     private String fullName;
     private UserDataForm info;
+    private List<Long> writtenRecommendationsIds;
+    private List<Long> recommendationsOnOthersIds;
 
     public User(String email, String password, String fullName) {
         this.email = email;
         this.password = password;
         this.fullName = fullName;
+        info = new UserDataForm();
+        writtenRecommendationsIds = new ArrayList<Long>();
+        recommendationsOnOthersIds = new ArrayList<Long>();
     }
 
     public String getEmail() {
@@ -30,5 +35,7 @@ public class User extends Entity {
         return fullName;
     }
     
-
+    public void setInfo(final UserDataForm info) {
+        this.info = info;
+    }
 }
