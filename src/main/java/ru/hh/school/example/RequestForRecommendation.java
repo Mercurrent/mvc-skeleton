@@ -5,7 +5,7 @@ public class RequestForRecommendation {
     private final Long refereeId;
     private final Long requesterId;
     private final Long recommendedUserId;
-    private final String text;
+    private String text;
     
     public RequestForRecommendation(final Long refereeId,
                                     final Long requesterId,
@@ -17,6 +17,13 @@ public class RequestForRecommendation {
         this.text = text;
     }
 
+    public void setText(String text) {
+        this.text = text;
+    }
+    
+    public String getText() {
+        return text;
+    }
 
             
 }
